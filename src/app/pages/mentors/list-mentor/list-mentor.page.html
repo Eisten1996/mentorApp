@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mentores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let mentor of mentors">
+    <ion-item href="#">
+      <ion-label>{{mentor.name+ " "+ mentor.last_name}}</ion-label>
+      <ion-thumbnail slot="end">
+        <img src="assets/img/mentor.jpg" />
+      </ion-thumbnail>
+    </ion-item>
+  </div>
+</ion-content>
