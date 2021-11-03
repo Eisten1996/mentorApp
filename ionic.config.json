@@ -1,0 +1,7 @@
+{
+  "name": "mentorApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
