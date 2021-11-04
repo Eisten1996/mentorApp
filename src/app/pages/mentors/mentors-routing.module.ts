@@ -15,6 +15,13 @@ const routes: Routes = [
             (m) => m.ListMentorPageModule
           ),
       },
+      {
+        path: 'add-mentor',
+        loadChildren: () =>
+          import('./add-mentor/add-mentor.module').then(
+            (m) => m.AddMentorPageModule
+          ),
+      },
     ],
   },
 ];

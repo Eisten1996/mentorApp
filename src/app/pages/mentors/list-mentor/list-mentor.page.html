@@ -1,16 +1,27 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Mentores</ion-title>
+    <ion-button slot="end" routerLink="../add-mentor">Añadir</ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div *ngFor="let mentor of mentors">
-    <ion-item href="#">
-      <ion-label>{{mentor.name+ " "+ mentor.last_name}}</ion-label>
-      <ion-thumbnail slot="end">
+    <ion-item>
+      <ion-label>
+        <h2>{{mentor.name+ " "+ mentor.last_name}}</h2>
+        <p *ngIf="mentor.hv.profile">{{mentor.hv.profile}}</p>
+        <p *ngIf="!mentor.hv.profile">Sin un perfil</p>
+      </ion-label>
+      <ion-avatar slot="start">
         <img src="assets/img/mentor.jpg" />
-      </ion-thumbnail>
+      </ion-avatar>
+      <ion-button
+        (click)="deleteMentor(mentor._id);$event.stopPropagation();"
+        color="danger"
+        slot="end"
+        ><ion-icon name="trash-outline"></ion-icon
+      ></ion-button>
     </ion-item>
   </div>
 </ion-content>

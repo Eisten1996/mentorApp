@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Añadir Mentor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3>Ingrese los datos del Mentor</h3>
+  <ion-item>
+    <ion-label position="stacked">Nombre</ion-label>
+    <ion-input name="name" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Apellidos</ion-label>
+    <ion-input name="last_name" [(ngModel)]="last_name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">DNI</ion-label>
+    <ion-input name="dni" [(ngModel)]="dni"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input name="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Educacion</ion-label>
+    <ion-input name="education" [(ngModel)]="education"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Perfil</ion-label>
+    <ion-input name="profile" [(ngModel)]="profile"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Experiencia</ion-label>
+    <ion-input name="experience" [(ngModel)]="experience"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="addMentor()" expand="block">Añadir</ion-button>
+</ion-content>

@@ -13,4 +13,11 @@ export class MentorService {
   getAll(): Observable<Mentor[]> {
     return this.http.get<Mentor[]>(environment.API + 'mentors');
   }
+
+  addMentor(data): Observable<any> {
+    return this.http.post(environment.API + 'mentors', data);
+  }
+  deleteMentor(id): Observable<any> {
+    return this.http.delete(environment.API + 'mentors/' + id);
+  }
 }

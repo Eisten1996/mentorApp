@@ -1,7 +1,10 @@
+import { Hv } from './hv.models';
+
 export interface Mentor {
-  id?: string;
+  _id?: string;
   name?: string;
   last_name?: string;
   dni?: Number;
   email?: string;
+  hv?: Hv;
 }
