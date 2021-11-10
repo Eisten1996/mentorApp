@@ -8,7 +8,12 @@
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let mentor of mentors">
+  <ion-searchbar placeholder="Buscar"
+                 [(ngModel)]="search"
+                 showCancelButton="focus"
+                 animated
+  ></ion-searchbar>
+  <div *ngFor="let mentor of mentors | filter: search">
     <ion-item [routerLink]="['../detail-mentor',mentor._id]">
       <ion-label>
         <h2>{{mentor.name+ " "+ mentor.last_name}}</h2>
