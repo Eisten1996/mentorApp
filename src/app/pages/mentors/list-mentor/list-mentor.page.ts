@@ -9,9 +9,9 @@ import { MentorService } from 'src/app/core/services/mentor.service';
   styleUrls: ['./list-mentor.page.scss'],
 })
 export class ListMentorPage implements OnInit {
-  constructor(private mentorService: MentorService, private router: Router) {}
   mentors: Mentor[];
-
+  search: string;
+  constructor(private mentorService: MentorService, private router: Router) {}
   ngOnInit() {
     this.mentorService.getAll().subscribe((a) => {
       this.mentors = a;
