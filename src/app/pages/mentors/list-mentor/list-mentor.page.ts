@@ -17,7 +17,6 @@ export class ListMentorPage implements OnInit {
       this.mentors = a;
     });
   }
-
   deleteMentor(id) {
     this.mentorService.deleteMentor(id).subscribe(
       (response) => {

@@ -21,9 +21,19 @@ const routes: Routes = [
           import('./add-mentor/add-mentor.module').then(
             (m) => m.AddMentorPageModule
           ),
+      } ,
+       {
+        path: 'detail-mentor/:id',
+        loadChildren: () => import('./detail-mentor/detail-mentor.module').then( m => m.DetailMentorPageModule)
       },
     ],
-  },
+  },  {
+    path: 'edit-mentor',
+    loadChildren: () => import('./edit-mentor/edit-mentor.module').then( m => m.EditMentorPageModule)
+  }
+
+
+
 ];
 
 @NgModule({
