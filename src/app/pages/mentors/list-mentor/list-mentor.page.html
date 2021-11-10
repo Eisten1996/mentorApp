@@ -1,13 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Mentores</ion-title>
-    <ion-button slot="end" routerLink="../add-mentor">Añadir</ion-button>
+    <ion-button fill="outline" slot="end" routerLink="../add-mentor">
+      <ion-icon   name="add-circle-outline"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div *ngFor="let mentor of mentors">
-    <ion-item>
+    <ion-item [routerLink]="['../detail-mentor',mentor._id]">
       <ion-label>
         <h2>{{mentor.name+ " "+ mentor.last_name}}</h2>
         <p *ngIf="mentor.hv.profile">{{mentor.hv.profile}}</p>
